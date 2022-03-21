@@ -44,6 +44,7 @@ sudo rm ./kubectl.sha256
 #end of else in if
 fi
 else echo "canclled by user!"
+exit 1
 fi
 
 
