@@ -38,10 +38,10 @@ sudo rm ./kubectl.sha256
 sudo rm ./minikube-linux-amd64
 sudo rm -rf ./installKuber.sh
 #end of then in if
-else echo "checksum check canclled by user"
+else echo "checksum check cancelled by user"
 sudo rm ./kubectl
 sudo rm ./kubectl.sha256
 #end of else in if
 fi
-else echo "canclled by user!"
+else echo "cancelled by user!"
 fi
