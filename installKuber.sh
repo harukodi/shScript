@@ -72,7 +72,7 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o 
 
 sudo apt-get update
 
-sudo apt-get install docker-ce docker-ce-cli
+sudo apt-get install docker-ce
 else
 echo "Skipping installation of docker!"
 fi
