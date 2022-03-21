@@ -19,7 +19,7 @@ sudo apt install curl -y
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 sudo install minikube-linux-amd64 /usr/local/bin/minikube
-echo "Want to check the checksum?"
+echo "Want to check the checksum?[Y/n]"
 read askPromptCheckSum
 #end of else in if
 fi
