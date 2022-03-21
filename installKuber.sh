@@ -38,10 +38,40 @@ sudo rm ./kubectl.sha256
 sudo rm ./minikube-linux-amd64
 sudo rm -rf ./installKuber.sh
 #end of then in if
-else echo "checksum check cancelled by user"
+else echo "checksum check canclled by user"
 sudo rm ./kubectl
 sudo rm ./kubectl.sha256
 #end of else in if
 fi
-else echo "cancelled by user!"
+else echo "canclled by user!"
+fi
+
+
+echo "Recomended to install docker continue [Y/n]"
+read askPromptDocker
+if [[ $askPromptDocker = y ]]
+then
+sudo apt-get remove docker docker-engine docker.io containerd runc
+
+sleep 2
+
+sudo apt-get update
+
+sudo apt-get install \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+
+ echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+sudo apt-get update
+
+sudo apt-get install docker-ce docker-ce-cli
+else
+echo "Skipping installation of docker!"
 fi
