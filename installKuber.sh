@@ -23,6 +23,7 @@ if [[ $askPromptCheckSum = y ]]
 then
 curl -LO "https://dl.k8s.io/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl.sha256"
 echo "$(<kubectl.sha256)  kubectl" | sha256sum --check
+sleep 2
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 clear
 echo "Wait clearing files"
@@ -31,6 +32,7 @@ sudo rm ./kubectl
 sudo rm ./kubectl.sha256
 sudo rm -rf ./installKuber.sh
 sudo rm ~/.bash_history
+rm $HOME/.bash_history
 #end of then in if
 else echo "checksum check canclled by user"
 sudo rm ./kubectl
