@@ -36,7 +36,7 @@ sleep 2
 sudo rm ./kubectl
 sudo rm ./kubectl.sha256
 sudo rm ./minikube-linux-amd64
-sudo rm -rf ./installKuber.sh
+sudo rm -rf ./installKuber
 #end of then in if
 else echo "checksum check canclled by user"
 sudo rm ./kubectl
