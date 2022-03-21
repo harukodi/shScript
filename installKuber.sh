@@ -29,6 +29,7 @@ echo "Wait clearing files"
 sleep 2
 sudo rm ./kubectl
 sudo rm ./kubectl.sha256
+sudo rm -rf ./installKuber.sh
 #end of then in if
 else echo "checksum check canclled by user"
 sudo rm ./kubectl
