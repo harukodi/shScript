@@ -31,8 +31,6 @@ sleep 2
 sudo rm ./kubectl
 sudo rm ./kubectl.sha256
 sudo rm -rf ./installKuber.sh
-sudo rm ~/.bash_history
-rm $HOME/.bash_history
 #end of then in if
 else echo "checksum check canclled by user"
 sudo rm ./kubectl
